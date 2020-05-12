@@ -1,0 +1,104 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>covd19data</groupId>
+  <artifactId>covd19data</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>covid19</name>
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+    <testSourceDirectory>test</testSourceDirectory>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.0</version>
+        <configuration>
+          <release>13</release>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  <dependencies>
+		  
+		  <dependency>
+		    <groupId>org.hibernate.orm</groupId>
+		    <artifactId>hibernate-entitymanager</artifactId>
+		    <version>6.0.0.Alpha4</version>
+		</dependency>
+  
+			<dependency>
+		    <groupId>org.ow2.asm</groupId>
+		    <artifactId>asm-all</artifactId>
+		    <version>6.0_BETA</version>
+		    <scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-all</artifactId>
+			<version>1.9.5</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
+		
+		
+				<!-- ESFINGE FRAMEWORKS -->		
+
+		<dependency>
+			<groupId>net.sf.esfinge</groupId>
+			<artifactId>metadata</artifactId>
+			<version>1.5.10</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>net.sf.esfinge</groupId>
+		    <artifactId>querybuilder-jpa1</artifactId>
+		    <version>1.7.2</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>net.sf.esfinge</groupId>
+		    <artifactId>classmock</artifactId>
+		    <version>2.3</version>
+		    <scope>test</scope>
+		</dependency>
+		
+		
+				<dependency>
+			<groupId>commons-beanutils</groupId>
+			<artifactId>commons-beanutils</artifactId>
+			<version>1.8.3</version>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>1.4</version>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.6</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.3.2</version>
+		</dependency>
+		
+	<dependency>
+    <groupId>org.hibernate.javax.persistence</groupId>
+    <artifactId>hibernate-jpa-2.1-api</artifactId>
+    <version>1.0.0.Final</version>
+</dependency>
+		
+		
+  </dependencies>
+</project>
