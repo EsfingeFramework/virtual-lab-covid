@@ -35,7 +35,7 @@ public class CoronaPopulate {
 	          while ((s = br.readLine()) != null) {
 	                if(!(s.equals("date,location,new_cases,new_deaths,total_cases,total_deaths")))
 	                {
-	                	org.esfinge.virtuallab.covid.CoronaDados c1 = new org.esfinge.virtuallab.covid.CoronaDados();
+	                	org.esfinge.virtuallab.covid.CoronaData c1 = new org.esfinge.virtuallab.covid.CoronaData();
 		               String[] dados = s.split(",");
 		               System.out.println(dados[0]);
 		               SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
