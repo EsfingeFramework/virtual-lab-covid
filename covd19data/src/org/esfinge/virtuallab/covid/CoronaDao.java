@@ -14,49 +14,49 @@ import net.sf.esfinge.querybuilder.annotation.GreaterOrEquals;
 
 @ServiceDAO(
 		label = "DAO",
-		description = "",
+		description = "Coronavirus data updated daily at 12:00.",
 		url = "jdbc:postgresql://localhost:5432/postgres", 
 		user = "postgres", 
-		password = "marco12", 
+		password = "postgres", 
 		dialect = "org.hibernate.dialect.PostgreSQLDialect")
-public interface CoronaDao extends Repository<CoronaDados>
+public interface CoronaDao extends Repository<CoronaVirusData>
 	{
 		
 		@ServiceMethod(
-			label = "",
-			description = "")
+			label = "Lists all coronavirus data ordered by date",
+			description = "Lists all coronavirus data ordered by date")
 		@TableReturn
-		public List<CoronaDados> getCoronaDadosOrderByData();
+		public List<CoronaVirusData> getCoronaVirusDataOrderByData();
 		
 		@ServiceMethod(
-				label = "",
-				description = "")
+				label = "List only the chosen country ordered by date",
+				description = "List only the chosen country ordered by date")
 		@TableReturn
-		public List<CoronaDados> getCoronaDadosByLocationOrderByData(String location);		
+		public List<CoronaVirusData> getCoronaVirusDataByLocationOrderByData(String location);		
 		
 		@ServiceMethod(
-				label = "",
-				description = "")
+				label = "Select all data for a specific day by total deaths",
+				description = "Select all data for a specific day by total deaths")
 		@TableReturn
-		public List<CoronaDados> getCoronaDadosByDataOrderByTotalDeathsDesc(@GreaterOrEquals Calendar data);		
+		public List<CoronaVirusData> getCoronaVirusDataByDataOrderByTotalDeathsDesc(Calendar data);		
 		
 		@ServiceMethod(
-				label = "",
-				description = "")
+				label = "Selects all data from a date greater than or equal to the selected date by ordering new deaths",
+				description = "Selects all data from a date greater than or equal to the selected date by ordering new deaths")
 		@TableReturn
-		public List<CoronaDados> getCoronaDadosByDataOrderByNewDeathsDesc(@GreaterOrEquals Calendar data);		
+		public List<CoronaVirusData> getCoronaVirusDataByDataOrderByNewDeathsDesc(@GreaterOrEquals Calendar data);		
 
 		@ServiceMethod(
-				label = "",
-				description = "")
+				label = "Selects all data from a date greater than or equal to the selected date by ordering new cases",
+				description = "Selects all data from a date greater than or equal to the selected date by ordering new cases")
 		@TableReturn
-		public List<CoronaDados> getCoronaDadosByDataOrderByNewCasesDesc(@GreaterOrEquals Calendar data);		
+		public List<CoronaVirusData> getCoronaVirusDataByDataOrderByNewCasesDesc(@GreaterOrEquals Calendar data);		
 
 		@ServiceMethod(
-				label = "",
-				description = "")
+				label = "Selects all data from a date greater than or equal to the selected date by ordering Total cases",
+				description = "Selects all data from a date greater than or equal to the selected date by ordering Total cases")
 		@TableReturn
-		public List<CoronaDados> getCoronaDadosByDataOrderByTotalCasesDesc(@GreaterOrEquals Calendar data);		
+		public List<CoronaVirusData> getCoronaVirusDataByDataOrderByTotalCasesDesc(@GreaterOrEquals Calendar data);		
 
 	
 	}
